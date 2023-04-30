@@ -9,7 +9,10 @@ const users = {}
 io.on('connection', socket => {
     socket.on('newUser', username =>{
         users[socket.id] = username
-        socket.broadcast.emit('userConnected', username)
+        io.emit('userConnected', {
+            username: username,
+            userCount: Object.keys(users).length
+        })
     })
     socket.on('disconnect', () => {
         socket.broadcast.emit('userDisconnected', users[socket.id])
