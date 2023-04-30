@@ -2,4 +2,4 @@
 
 ### DEPLOYED USING RENDER
 
-render.com
+The frontend is hosted on Github Pages and the source code can be found on this repo -> https://github.com/CodyKoInABox/chatSocket
